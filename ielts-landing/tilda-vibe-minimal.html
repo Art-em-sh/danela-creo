@@ -1,0 +1,52 @@
+<section id="vb-l7k-main" class="vb-l7k" data-section-name="Заявка IELTS" data-vibeblock-unique-section="yes" aria-labelledby="vb-l7k-title">
+  <div class="vb-l7k__wrap">
+    <img class="vb-l7k__photo" src="https://static.tildacdn.com/tila3030-3034-4034-a433-626338326138/teacher-danelya.jpg" alt="Данэля, преподаватель IELTS" width="600" height="900">
+    <h1 id="vb-l7k-title" class="vb-l7k__title">Оставьте заявку на подготовку к IELTS</h1>
+    <p class="vb-l7k__text">Напишите мне в удобный мессенджер, и мы быстро свяжемся с вами.</p>
+    <div class="vb-l7k__btns">
+      <a class="vb-l7k__btn vb-l7k__wa" data-cta="whatsapp" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 1.9 17.8L0 24l6.4-1.7A11.8 11.8 0 0 0 12 23.8h0A11.8 11.8 0 0 0 20.5 3.5zM12 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.4 4.7zm5.4-7.3c-.3-.1-1.7-.8-2-.9s-.5-.1-.7.1l-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.4 3.4c.2.2 2.4 3.7 5.8 5.1 2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.7 2.7 0 0 0 .2-1.6c-.1-.1-.3-.2-.6-.3z"/></svg>Написать в WhatsApp</a>
+      <a class="vb-l7k__btn vb-l7k__tg" data-cta="telegram" href="#"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.8 15.6l-.4 4.2c.6 0 .9-.3 1.2-.6l2.9-2.7 6 4.4c1.1.6 1.9.3 2.2-1L23.9 3.8c.4-1.6-.6-2.2-1.6-1.8L1.2 10.1c-1.5.6-1.5 1.5-.3 1.9l5.4 1.7L18.9 6c.6-.4 1.1-.2.7.2z"/></svg>Написать в Telegram</a>
+    </div>
+  </div>
+</section>
+<style>
+.vb-l7k,
+.vb-l7k * { box-sizing: border-box; }
+.vb-l7k * { margin: 0; padding: 0; }
+.vb-l7k { font-family: var(--t-text-font); color: #14181f; background: #f5f7fa; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 32px 20px; -webkit-text-size-adjust: 100%; }
+.vb-l7k__wrap { width: 100%; max-width: 420px; text-align: center; }
+.vb-l7k__photo { display: block; width: 100%; max-width: 260px; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: 24px; margin: 0 auto 24px; }
+.vb-l7k__title { font-family: var(--t-headline-font); font-size: clamp(26px, 7vw, 34px); line-height: 1.15; font-weight: 800; letter-spacing: -.015em; text-wrap: balance; }
+.vb-l7k__text { font-size: 18px; line-height: 1.45; color: #3d4654; margin: 14px 0 26px; text-wrap: balance; }
+.vb-l7k__btns { display: grid; gap: 12px; }
+.vb-l7k__btn { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 60px; border-radius: 16px; font-size: 18px; font-weight: 700; color: #fff; text-decoration: none; transition: transform .15s cubic-bezier(.25,1,.5,1), opacity .15s; }
+.vb-l7k__btn:hover { opacity: .92; }
+.vb-l7k__btn:active { transform: scale(.98); }
+.vb-l7k__btn svg { width: 24px; height: 24px; fill: #fff; flex: none; }
+.vb-l7k__wa { background: #168a45; }
+.vb-l7k__tg { background: #1e7fbf; }
+@media (prefers-reduced-motion: reduce) { .vb-l7k__btn { transition: none; } }
+</style>
+<script>
+(function () {
+  var root = document.getElementById('vb-l7k-main');
+  if (!root) return;
+  var DL = {
+    waPhone: "WA_PHONE",   // номер WhatsApp без + и пробелов, например 77001234567
+    tgUser: "TG_USERNAME", // username Telegram без @
+    waText: "Здравствуйте! Хочу оставить заявку на подготовку к IELTS (с сайта)",
+    tgStart: "site"        // параметр для бота: t.me/бот?start=site
+  };
+  var wa = "https://wa.me/" + DL.waPhone + "?text=" + encodeURIComponent(DL.waText);
+  var tg = "https://t.me/" + DL.tgUser + (DL.tgStart ? "?start=" + encodeURIComponent(DL.tgStart) : "");
+  root.querySelectorAll('[data-cta]').forEach(function (a) {
+    var ch = a.getAttribute('data-cta');
+    a.href = ch === 'whatsapp' ? wa : tg;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    a.addEventListener('click', function () {
+      // ХУК ДЛЯ МЕТЫ: сюда вставим событие (Contact / Lead), когда будут скрипты
+    });
+  });
+})();
+</script>
