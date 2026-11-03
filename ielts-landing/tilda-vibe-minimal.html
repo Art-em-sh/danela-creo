@@ -34,11 +34,10 @@
   var DL = {
     waPhone: "77072397620",   // номер WhatsApp без + и пробелов, например 77001234567
     tgUser: "danelya_ieltss", // username Telegram без @
-    waText: "Здравствуйте! Хочу оставить заявку на подготовку к IELTS (с сайта)",
-    tgStart: "site"        // параметр для бота: t.me/бот?start=site
+    waText: "Здравствуйте! Хочу оставить заявку на подготовку к IELTS (с сайта)"
   };
   var wa = "https://wa.me/" + DL.waPhone + "?text=" + encodeURIComponent(DL.waText);
-  var tg = "https://t.me/" + DL.tgUser + (DL.tgStart ? "?start=" + encodeURIComponent(DL.tgStart) : "");
+  var tg = "https://t.me/" + DL.tgUser + "?text=" + encodeURIComponent(DL.waText);
   root.querySelectorAll('[data-cta]').forEach(function (a) {
     var ch = a.getAttribute('data-cta');
     a.href = ch === 'whatsapp' ? wa : tg;
