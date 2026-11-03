@@ -32,8 +32,8 @@
   var root = document.getElementById('vb-l7k-main');
   if (!root) return;
   var DL = {
-    waPhone: "WA_PHONE",   // номер WhatsApp без + и пробелов, например 77001234567
-    tgUser: "TG_USERNAME", // username Telegram без @
+    waPhone: "77072397620",   // номер WhatsApp без + и пробелов, например 77001234567
+    tgUser: "danelya_ieltss", // username Telegram без @
     waText: "Здравствуйте! Хочу оставить заявку на подготовку к IELTS (с сайта)",
     tgStart: "site"        // параметр для бота: t.me/бот?start=site
   };
@@ -45,7 +45,7 @@
     a.target = '_blank';
     a.rel = 'noopener';
     a.addEventListener('click', function () {
-      // ХУК ДЛЯ МЕТЫ: сюда вставим событие (Contact / Lead), когда будут скрипты
+      try { if (window.fbq) fbq('track', 'Contact', { channel: ch, content_name: 'ielts_start' }); } catch (e) {}
     });
   });
 })();
